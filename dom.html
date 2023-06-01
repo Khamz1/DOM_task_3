@@ -1,0 +1,46 @@
+    <html>
+<head>
+  <title>интукод</title>
+</head>
+<body>
+  <div id="main">
+      <ul id="list">
+          <li>html</li>
+          <li>css</li>
+      </ul>
+  </div>
+    <div id="copyright">(c) INTOCODE</div>
+
+    <script>  
+    const name = document.createElement('h3')
+    name.textContent = 'Работа с DOM'
+    document.body.prepend(name);
+
+    const refs = document.createElement('a')
+    refs.textContent = 'Dom'
+    refs.href = 'https://ru.wikipedia.org/wiki/Document_Object_Model'
+     document.getElementById('main').append(refs)
+     
+
+      changeColor =  (color) => {
+        document.body.style.backgroundColor = color
+     }
+       document.body.append(changeColor('red'));
+
+       addItem = (text) => {
+        const item = document.createElement('li')
+        for(i=0;i<=1;i++){
+           item.textContent = text
+            document.getElementById('list').append(item)
+        }
+       }
+       document.body.append(addItem('hello'));
+       
+      let copyright = document.getElementById("copyright");
+            if (copyright)
+                      copyright.remove();
+       
+     
+    </script>
+</body>
+</html>
